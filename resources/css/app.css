@@ -1,0 +1,8 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'animate.css';
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import './styles/tokens.css';
+@import './styles/base.css';
+@import './styles/utilities.css';

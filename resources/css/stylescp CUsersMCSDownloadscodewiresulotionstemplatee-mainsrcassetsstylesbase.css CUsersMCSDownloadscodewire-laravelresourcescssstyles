@@ -1,0 +1,120 @@
+/* ============================================================
+   CodeWire Solutions — Design Tokens
+   Brand: Deep black foundation + strategic yellow accent
+   ============================================================ */
+
+:root {
+  /* ---- Brand palette ---- */
+  --black: #0b0b0b;
+  --charcoal: #141414;
+  --charcoal-2: #1c1c1c;
+  --charcoal-3: #242424;
+  --off-white: #f5f5f0;
+  --white: #ffffff;
+  --gray: #8a8a8a;
+
+  /* Accent (yellow) */
+  --yellow: #ffc400;
+  --yellow-strong: #f0b400;
+  --yellow-bright: #ffd23d;
+  --yellow-tint: rgba(255, 196, 0, 0.1);
+  --yellow-tint-2: rgba(255, 196, 0, 0.18);
+  --yellow-glow: rgba(255, 196, 0, 0.35);
+
+  /* ---- Semantic surfaces (light-dominant) ---- */
+  --bg-base: #f6f6f3;   /* page: warm off-white */
+  --bg-elev: #ffffff;   /* elevated cards & bands: white */
+  --bg-elev-2: #ecebe4; /* deeper off-white for insets / secondary fills */
+  --bg-light: #f5f5f0;
+  --bg-white: #ffffff;
+  --bg-dark: #0b0b0b;   /* explicit dark for opt-in dark bands */
+
+  /* ---- Text (ink-on-light by default) ---- */
+  --text-hi: #0b0b0b;
+  --text-body: #3a3a3a;
+  --text-muted: #6a6a6a;
+  --text-faint: rgba(11, 11, 11, 0.42);
+  --text-ink: #0b0b0b;
+  --text-ink-body: #3a3a3a;
+  --text-ink-muted: #6a6a6a;
+
+  /* ---- Borders / lines ---- */
+  --border: rgba(11, 11, 11, 0.1);
+  --border-strong: rgba(11, 11, 11, 0.16);
+  --border-ink: rgba(11, 11, 11, 0.1);
+  --border-ink-strong: rgba(11, 11, 11, 0.16);
+
+  /* ---- Accent semantics ---- */
+  --accent: var(--yellow);
+  --accent-hover: var(--yellow-bright);
+  --accent-ink: #0b0b0b; /* text sitting on yellow */
+
+  /* ---- Typography ---- */
+  --font-display: "Space Grotesk", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --fs-display: clamp(2.75rem, 6.2vw, 5.5rem);
+  --fs-h1: clamp(2.25rem, 4.6vw, 3.75rem);
+  --fs-h2: clamp(1.9rem, 3.4vw, 3rem);
+  --fs-h3: clamp(1.4rem, 2.1vw, 1.85rem);
+  --fs-h4: 1.25rem;
+  --fs-lead: clamp(1.05rem, 1.4vw, 1.25rem);
+  --fs-lg: 1.125rem;
+  --fs-body: 1rem;
+  --fs-sm: 0.875rem;
+  --fs-xs: 0.75rem;
+
+  --lh-tight: 1.05;
+  --lh-snug: 1.2;
+  --lh-body: 1.7;
+
+  --ls-tight: -0.02em;
+  --ls-display: -0.03em;
+  --ls-wide: 0.18em;
+
+  /* ---- Spacing ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --section-y: clamp(4.5rem, 9vw, 8rem);
+
+  /* ---- Layout ---- */
+  --container: 1200px;
+  --container-wide: 1340px;
+  --container-narrow: 820px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+
+  /* ---- Radii ---- */
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  /* ---- Shadows ---- */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.18);
+  --shadow-accent: 0 16px 40px rgba(255, 196, 0, 0.22);
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur: 0.4s;
+  --dur-fast: 0.2s;
+  --dur-slow: 0.7s;
+
+  /* ---- Z-index ---- */
+  --z-header: 1000;
+  --z-overlay: 1100;
+  --z-modal: 1200;
+  --z-top: 1300;
+
+  --header-h: 76px;
+}
