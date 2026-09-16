@@ -7,7 +7,7 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('HomeView', [
         'homeServices' => SiteData::homeServices(),
-        'featuredProjects' => SiteData::featuredProjects(),
+        'featuredProjects' => SiteData::projects(),
         'stats' => SiteData::stats(),
         'clientTestimonials' => SiteData::clientTestimonials(),
         'recentPosts' => SiteData::recentPosts(),

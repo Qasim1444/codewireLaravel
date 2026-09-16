@@ -1,9 +1,9 @@
 <?php
 
 return array (
-  'featuredProjects' => 
+  'featuredProjects' =>
   array (
-    0 => 
+    0 =>
     array (
       'slug' => 'chefshub',
       'name' => 'ChefsHub',
@@ -143,16 +143,16 @@ return array (
       'outcome' => 'A single Laravel backend cleanly serving four distinct experiences — public web, supplier and chef admin panels, a Nuxt.js admin dashboard, and a native Flutter app — with a full marketplace, training courses and communication tooling built in.',
       'featured' => true,
     ),
-    1 => 
+    1 =>
     array (
       'slug' => 'project360ai',
       'name' => 'Project360 AI',
       'category' => 'AI & Automation',
       'industry' => 'AI / SaaS',
       'image' => '/images/project360.jpeg',
-      'tech' => 
+      'tech' =>
       array (
-        0 => 'Python',
+        0 => 'Laravel',
         1 => 'OpenAI',
         2 => 'React',
         3 => 'Node.js',
@@ -162,7 +162,7 @@ return array (
       'summary' => 'An AI-powered project management platform that automates planning, tracking and reporting for modern teams.',
       'challenge' => 'Teams were wasting hours on manual status updates, reports and task prioritization across disconnected tools.',
       'solution' => 'We built an intelligent platform with AI-driven task suggestions, auto-generated progress reports and real-time collaboration — all in one dashboard.',
-      'results' => 
+      'results' =>
       array (
         0 => 'AI-assisted planning',
         1 => 'Automated reporting',
@@ -170,7 +170,7 @@ return array (
       ),
       'featured' => true,
     ),
-    2 => 
+    2 =>
     array (
       'slug' => 'coolbuffs',
       'name' => 'CoolBuffs — AI-Powered Recruitment Platform',
@@ -273,6 +273,245 @@ return array (
       'outcome' => 'A production job board with a genuinely differentiated feature — an in-house, cost-controlled AI assistant with its own admin analytics — rather than a bolt-on chat widget from a SaaS vendor.',
       'featured' => true,
     ),
+    3 =>
+    array (
+      'slug' => 'careox-v2',
+      'name' => 'CareOX v2',
+      'category' => 'Web Applications',
+      'industry' => 'Logistics / Warehouse & Fulfilment',
+      'image' => '/images/careox.png',
+      'tech' =>
+      array (
+        0 => 'Laravel',
+        1 => 'Vue.js',
+        2 => 'Inertia.js',
+        3 => 'Tailwind CSS',
+        4 => 'Docker',
+      ),
+      'liveUrl' => '#',
+      'summary' => 'CareOX v2 is a multi-tenant order fulfilment and warehouse management platform that lets a company manage its entire operations pipeline — from sales orders to shipment — in one system.',
+      'challenge' => 'Fulfilment businesses needed one system to run warehouse operations, multi-channel orders, CRM, finance and email — instead of stitching together spreadsheets and disconnected tools across multiple client companies.',
+      'solution' => 'We built a Laravel 8 + Inertia/Vue 3 ERP-style platform with Admin, Super Admin and Fulfilment roles, a full physical warehouse hierarchy (Warehouse, Building, Aisle, Bay, Bin, Container), order/fulfilment/shipment workflows, direct marketplace integrations, built-in CRM and finance modules, and an in-app email client with IMAP support.',
+      'results' =>
+      array (
+        0 => 'Full warehouse hierarchy: Warehouse, Building, Aisle, Bay, Bin, Container, Stock',
+        1 => 'Multi-tenant company/admin/super-admin role management',
+        2 => 'Direct sales-channel integrations: Amazon, Groupon, Wowcher, Gogroopie, Ejogga, Xstreamgym',
+        3 => 'Built-in CRM: customers, beneficiaries, deals, quotations, cases',
+        4 => 'Finance suite: invoices, payments, payment gateways, currency exchange, payroll',
+        5 => 'In-app email client (Inbox, Sent, Trash, Junk) with IMAP integration',
+      ),
+      'featureGroups' =>
+      array (
+        0 =>
+        array (
+          'title' => 'User & Access Management',
+          'items' =>
+          array (
+            0 => 'Admin, Super Admin and Fulfilment roles with granular permissions',
+            1 => 'Multi-tenant onboarding and management of multiple client companies',
+          ),
+        ),
+        1 =>
+        array (
+          'title' => 'Warehouse Operations',
+          'items' =>
+          array (
+            0 => 'Full physical warehouse hierarchy: Warehouse, Building, Aisle, Bay, Bin, Container',
+            1 => 'Stock management and stock logs/adjustments',
+          ),
+        ),
+        2 =>
+        array (
+          'title' => 'Orders & Fulfilment',
+          'items' =>
+          array (
+            0 => 'Orders, Fulfilment Orders, Purchase Orders',
+            1 => 'Deliveries, Shipments and Shipment Items tracking',
+          ),
+        ),
+        3 =>
+        array (
+          'title' => 'Sales Channel Integrations',
+          'items' =>
+          array (
+            0 => 'Direct integrations with Amazon, Groupon, Wowcher, Gogroopie, Ejogga and Xstreamgym marketplaces',
+          ),
+        ),
+        4 =>
+        array (
+          'title' => 'Product & Inventory',
+          'items' =>
+          array (
+            0 => 'Products, product stock and product titles',
+            1 => 'Spare parts management',
+          ),
+        ),
+        5 =>
+        array (
+          'title' => 'CRM & Customer Tools',
+          'items' =>
+          array (
+            0 => 'Customers, beneficiaries, deals and quotations',
+            1 => 'Support/case tracking with notes',
+          ),
+        ),
+        6 =>
+        array (
+          'title' => 'Finance',
+          'items' =>
+          array (
+            0 => 'Invoices and payments with multiple payment gateways',
+            1 => 'Currency exchange, payroll and salaries',
+          ),
+        ),
+        7 =>
+        array (
+          'title' => 'Email Suite',
+          'items' =>
+          array (
+            0 => 'Built-in email client: Inbox, Sent, Trash, Junk',
+            1 => 'Email accounts/settings with IMAP integration',
+          ),
+        ),
+        8 =>
+        array (
+          'title' => 'Reporting & Document Handling',
+          'items' =>
+          array (
+            0 => 'Activity logs, notifications, calendar and reviews API',
+            1 => 'PDF generation, Excel import/export and document storage/zipping',
+          ),
+        ),
+      ),
+      'architectureHighlights' =>
+      array (
+        0 => 'Laravel 8 backend with Jetstream and Sanctum, Inertia-Laravel bridging to a Vue 3 SPA-style frontend',
+        1 => 'Vue 3 + Inertia.js + Tailwind CSS frontend with ApexCharts for dashboards and FullCalendar for scheduling',
+        2 => 'Docker/docker-compose for local and deployment environments, with Bitbucket Pipelines CI/CD',
+        3 => 'dompdf for PDF generation and Maatwebsite Excel for import/export across finance and reporting modules',
+      ),
+      'techTable' =>
+      array (
+        0 => array ('layer' => 'Backend', 'technology' => 'PHP 8, Laravel 8, Jetstream, Sanctum'),
+        1 => array ('layer' => 'Frontend', 'technology' => 'Vue 3, Inertia.js, Tailwind CSS'),
+        2 => array ('layer' => 'Data & charts', 'technology' => 'ApexCharts, FullCalendar'),
+        3 => array ('layer' => 'Documents', 'technology' => 'dompdf, Maatwebsite Excel'),
+        4 => array ('layer' => 'Infrastructure', 'technology' => 'Docker, docker-compose, Bitbucket Pipelines'),
+      ),
+      'outcome' => 'A single multi-tenant platform covering warehouse operations, order fulfilment, CRM, finance and email — replacing disconnected spreadsheets and tools with one unified operations pipeline.',
+      'featured' => true,
+    ),
+    4 =>
+    array (
+      'slug' => 'xstream-gym',
+      'name' => 'XStream Gym',
+      'category' => 'Web Applications',
+      'industry' => 'Fitness / Health & Wellness',
+      'image' => '/images/XStream Gym.png',
+      'tech' =>
+      array (
+        0 => 'Laravel',
+        1 => 'Inertia.js',
+        2 => 'Vue.js',
+        3 => 'WebSocket',
+        4 => 'Redis',
+        5 => 'Stripe',
+      ),
+      'liveUrl' => '#',
+      'summary' => 'XStream Gym is a full-stack fitness platform that connects certified trainers with members through live-streamed and on-demand workout classes, built with Laravel and Inertia.js.',
+      'challenge' => 'The client wanted a single platform that could stream live fitness classes in real time, run a trainer marketplace with scheduling and payouts, track member health and nutrition, and keep members socially engaged — all under one role-based admin system.',
+      'solution' => 'We built a Laravel + Inertia.js platform with a WebSocket/Redis streaming backend for live classes (with class series, comments and attendance tracking), a trainer marketplace with profiles, schedules and reviews, Stripe-powered subscriptions and trainer payouts, integrated diet/nutrition and wearable-device tracking, social features (friends, messaging, likes, notifications), and a role-based admin dashboard covering users, trainers, classes, payments and disputes.',
+      'results' =>
+      array (
+        0 => 'Real-time live class streaming via WebSocket/Redis with class series and attendance tracking',
+        1 => 'Trainer marketplace with profiles, schedules, class management and reviews',
+        2 => 'Stripe-powered tiered subscriptions, trainer payouts and bank/withdrawal management',
+        3 => 'Health & nutrition tracking with diet plans, meal logging and wearable device sync',
+        4 => 'Social features: friend connections, messaging, likes and notifications',
+        5 => 'Role-based admin dashboard for users, trainers, classes, payments and disputes/cases',
+      ),
+      'featureGroups' =>
+      array (
+        0 =>
+        array (
+          'title' => 'Live Class Streaming',
+          'items' =>
+          array (
+            0 => 'Real-time video classes powered by a WebSocket/Redis streaming backend',
+            1 => 'Class series scheduling with live and on-demand playback',
+            2 => 'In-class comments and live attendance tracking',
+          ),
+        ),
+        1 =>
+        array (
+          'title' => 'Trainer Marketplace',
+          'items' =>
+          array (
+            0 => 'Trainer profiles with certifications and specialties',
+            1 => 'Class scheduling and management tools for trainers',
+            2 => 'Member reviews and ratings',
+          ),
+        ),
+        2 =>
+        array (
+          'title' => 'Subscriptions & Payments',
+          'items' =>
+          array (
+            0 => 'Tiered membership packages/plans',
+            1 => 'Stripe-powered billing and checkout',
+            2 => 'Trainer payouts with bank account and withdrawal management',
+          ),
+        ),
+        3 =>
+        array (
+          'title' => 'Health & Nutrition Tracking',
+          'items' =>
+          array (
+            0 => 'Integrated diet plans and meal/food logging',
+            1 => 'Wearable device sync: heart rate, sleep and weight',
+            2 => 'Progress tracking over time',
+          ),
+        ),
+        4 =>
+        array (
+          'title' => 'Social Features',
+          'items' =>
+          array (
+            0 => 'Friend connections and direct messaging',
+            1 => 'Likes and engagement notifications',
+            2 => 'Activity feed to keep members connected',
+          ),
+        ),
+        5 =>
+        array (
+          'title' => 'Admin Dashboard',
+          'items' =>
+          array (
+            0 => 'Role-based admin panel for users, trainers and classes',
+            1 => 'Payment and payout oversight',
+            2 => 'Disputes/cases management and platform settings',
+          ),
+        ),
+      ),
+      'architectureHighlights' =>
+      array (
+        0 => 'Laravel backend with Inertia.js bridging to a Vue.js SPA-style frontend for a seamless single-page experience',
+        1 => 'WebSocket/Redis streaming backend powering real-time live class video, comments and attendance',
+        2 => 'Stripe integration for tiered subscriptions, one-off billing and trainer payout/withdrawal flows',
+        3 => 'Role-based access control separating member, trainer and admin experiences within one codebase',
+      ),
+      'techTable' =>
+      array (
+        0 => array ('layer' => 'Backend', 'technology' => 'Laravel (PHP)'),
+        1 => array ('layer' => 'Frontend', 'technology' => 'Inertia.js, Vue.js'),
+        2 => array ('layer' => 'Real-time streaming', 'technology' => 'WebSocket, Redis'),
+        3 => array ('layer' => 'Payments', 'technology' => 'Stripe (subscriptions, billing, payouts)'),
+        4 => array ('layer' => 'Health data', 'technology' => 'Wearable device sync (heart rate, sleep, weight)'),
+      ),
+      'outcome' => 'A unified fitness platform where members stream live and on-demand classes, track their health, and stay socially engaged, while trainers run their own marketplace presence and get paid — all managed through one role-based admin dashboard.',
+      'featured' => true,
+    ),
   ),
   'projectCategories' =>
   array (
@@ -284,9 +523,9 @@ return array (
     5 => 'UI/UX',
     6 => 'AI & Automation',
   ),
-  'projects' => 
+  'projects' =>
   array (
-    0 => 
+    0 =>
     array (
       'slug' => 'chefshub',
       'name' => 'ChefsHub',
@@ -426,16 +665,16 @@ return array (
       'outcome' => 'A single Laravel backend cleanly serving four distinct experiences — public web, supplier and chef admin panels, a Nuxt.js admin dashboard, and a native Flutter app — with a full marketplace, training courses and communication tooling built in.',
       'featured' => true,
     ),
-    1 => 
+    1 =>
     array (
       'slug' => 'project360ai',
       'name' => 'Project360 AI',
       'category' => 'AI & Automation',
       'industry' => 'AI / SaaS',
       'image' => '/images/project360.jpeg',
-      'tech' => 
+      'tech' =>
       array (
-        0 => 'Python',
+        0 => 'Laravel',
         1 => 'OpenAI',
         2 => 'React',
         3 => 'Node.js',
@@ -445,7 +684,7 @@ return array (
       'summary' => 'An AI-powered project management platform that automates planning, tracking and reporting for modern teams.',
       'challenge' => 'Teams were wasting hours on manual status updates, reports and task prioritization across disconnected tools.',
       'solution' => 'We built an intelligent platform with AI-driven task suggestions, auto-generated progress reports and real-time collaboration — all in one dashboard.',
-      'results' => 
+      'results' =>
       array (
         0 => 'AI-assisted planning',
         1 => 'Automated reporting',
@@ -453,7 +692,7 @@ return array (
       ),
       'featured' => true,
     ),
-    2 => 
+    2 =>
     array (
       'slug' => 'coolbuffs',
       'name' => 'CoolBuffs — AI-Powered Recruitment Platform',
@@ -563,9 +802,9 @@ return array (
       'category' => 'Web Applications',
       'industry' => 'Finance / Real Estate',
       'image' => '/images/brokerconvalor.jpeg',
-      'tech' => 
+      'tech' =>
       array (
-        0 => 'WordPress',
+        0 => 'Laravel',
         1 => 'PHP',
         2 => 'JavaScript',
         3 => 'CSS',
@@ -574,7 +813,7 @@ return array (
       'summary' => 'A professional brokerage and real estate advisory website for an Italian financial services firm.',
       'challenge' => 'The client needed a clean, trustworthy web presence in Italian that clearly communicated their financial and real estate services to high-value clients.',
       'solution' => 'We built a polished multilingual WordPress site with service pages, lead capture forms and SEO optimization targeting the Italian market.',
-      'results' => 
+      'results' =>
       array (
         0 => 'Professional brand presence',
         1 => 'Lead generation ready',
@@ -582,14 +821,14 @@ return array (
       ),
       'featured' => false,
     ),
-    4 => 
+    4 =>
     array (
       'slug' => 'pro1-platform',
       'name' => 'Healthy Food',
       'category' => 'Web Applications',
       'industry' => 'Technology',
       'image' => '/images/pro1.jpeg',
-      'tech' => 
+      'tech' =>
       array (
         0 => 'React',
         1 => 'Node.js',
@@ -600,13 +839,349 @@ return array (
       'summary' => 'A modern web platform built for a tech-forward business, featuring a clean UI, fast performance and scalable architecture.',
       'challenge' => 'The client needed a robust, maintainable web application that could grow with their business and provide an excellent user experience from day one.',
       'solution' => 'We architected a full-stack React + Node.js application with a component-driven frontend, RESTful API and cloud-ready infrastructure.',
-      'results' => 
+      'results' =>
       array (
         0 => 'Sub-2s load time',
         1 => 'Scalable cloud architecture',
         2 => 'Clean component system',
       ),
       'featured' => false,
+    ),
+    5 =>
+    array (
+      'slug' => 'careox-v2',
+      'name' => 'CareOX v2',
+      'category' => 'Web Applications',
+      'industry' => 'Logistics / Warehouse & Fulfilment',
+      'image' => '/images/careox.png',
+      'tech' =>
+      array (
+        0 => 'Laravel',
+        1 => 'Vue.js',
+        2 => 'Inertia.js',
+        3 => 'Tailwind CSS',
+        4 => 'Docker',
+      ),
+      'liveUrl' => '#',
+      'summary' => 'CareOX v2 is a multi-tenant order fulfilment and warehouse management platform that lets a company manage its entire operations pipeline — from sales orders to shipment — in one system.',
+      'challenge' => 'Fulfilment businesses needed one system to run warehouse operations, multi-channel orders, CRM, finance and email — instead of stitching together spreadsheets and disconnected tools across multiple client companies.',
+      'solution' => 'We built a Laravel 8 + Inertia/Vue 3 ERP-style platform with Admin, Super Admin and Fulfilment roles, a full physical warehouse hierarchy (Warehouse, Building, Aisle, Bay, Bin, Container), order/fulfilment/shipment workflows, direct marketplace integrations, built-in CRM and finance modules, and an in-app email client with IMAP support.',
+      'results' =>
+      array (
+        0 => 'Full warehouse hierarchy: Warehouse, Building, Aisle, Bay, Bin, Container, Stock',
+        1 => 'Multi-tenant company/admin/super-admin role management',
+        2 => 'Direct sales-channel integrations: Amazon, Groupon, Wowcher, Gogroopie, Ejogga, Xstreamgym',
+        3 => 'Built-in CRM: customers, beneficiaries, deals, quotations, cases',
+        4 => 'Finance suite: invoices, payments, payment gateways, currency exchange, payroll',
+        5 => 'In-app email client (Inbox, Sent, Trash, Junk) with IMAP integration',
+      ),
+      'featureGroups' =>
+      array (
+        0 =>
+        array (
+          'title' => 'User & Access Management',
+          'items' =>
+          array (
+            0 => 'Admin, Super Admin and Fulfilment roles with granular permissions',
+            1 => 'Multi-tenant onboarding and management of multiple client companies',
+          ),
+        ),
+        1 =>
+        array (
+          'title' => 'Warehouse Operations',
+          'items' =>
+          array (
+            0 => 'Full physical warehouse hierarchy: Warehouse, Building, Aisle, Bay, Bin, Container',
+            1 => 'Stock management and stock logs/adjustments',
+          ),
+        ),
+        2 =>
+        array (
+          'title' => 'Orders & Fulfilment',
+          'items' =>
+          array (
+            0 => 'Orders, Fulfilment Orders, Purchase Orders',
+            1 => 'Deliveries, Shipments and Shipment Items tracking',
+          ),
+        ),
+        3 =>
+        array (
+          'title' => 'Sales Channel Integrations',
+          'items' =>
+          array (
+            0 => 'Direct integrations with Amazon, Groupon, Wowcher, Gogroopie, Ejogga and Xstreamgym marketplaces',
+          ),
+        ),
+        4 =>
+        array (
+          'title' => 'Product & Inventory',
+          'items' =>
+          array (
+            0 => 'Products, product stock and product titles',
+            1 => 'Spare parts management',
+          ),
+        ),
+        5 =>
+        array (
+          'title' => 'CRM & Customer Tools',
+          'items' =>
+          array (
+            0 => 'Customers, beneficiaries, deals and quotations',
+            1 => 'Support/case tracking with notes',
+          ),
+        ),
+        6 =>
+        array (
+          'title' => 'Finance',
+          'items' =>
+          array (
+            0 => 'Invoices and payments with multiple payment gateways',
+            1 => 'Currency exchange, payroll and salaries',
+          ),
+        ),
+        7 =>
+        array (
+          'title' => 'Email Suite',
+          'items' =>
+          array (
+            0 => 'Built-in email client: Inbox, Sent, Trash, Junk',
+            1 => 'Email accounts/settings with IMAP integration',
+          ),
+        ),
+        8 =>
+        array (
+          'title' => 'Reporting & Document Handling',
+          'items' =>
+          array (
+            0 => 'Activity logs, notifications, calendar and reviews API',
+            1 => 'PDF generation, Excel import/export and document storage/zipping',
+          ),
+        ),
+      ),
+      'architectureHighlights' =>
+      array (
+        0 => 'Laravel 8 backend with Jetstream and Sanctum, Inertia-Laravel bridging to a Vue 3 SPA-style frontend',
+        1 => 'Vue 3 + Inertia.js + Tailwind CSS frontend with ApexCharts for dashboards and FullCalendar for scheduling',
+        2 => 'Docker/docker-compose for local and deployment environments, with Bitbucket Pipelines CI/CD',
+        3 => 'dompdf for PDF generation and Maatwebsite Excel for import/export across finance and reporting modules',
+      ),
+      'techTable' =>
+      array (
+        0 => array ('layer' => 'Backend', 'technology' => 'PHP 8, Laravel 8, Jetstream, Sanctum'),
+        1 => array ('layer' => 'Frontend', 'technology' => 'Vue 3, Inertia.js, Tailwind CSS'),
+        2 => array ('layer' => 'Data & charts', 'technology' => 'ApexCharts, FullCalendar'),
+        3 => array ('layer' => 'Documents', 'technology' => 'dompdf, Maatwebsite Excel'),
+        4 => array ('layer' => 'Infrastructure', 'technology' => 'Docker, docker-compose, Bitbucket Pipelines'),
+      ),
+      'outcome' => 'A single multi-tenant platform covering warehouse operations, order fulfilment, CRM, finance and email — replacing disconnected spreadsheets and tools with one unified operations pipeline.',
+      'featured' => true,
+    ),
+    6 =>
+    array (
+      'slug' => 'xstream-gym',
+      'name' => 'XStream Gym',
+      'category' => 'Web Applications',
+      'industry' => 'Fitness / Health & Wellness',
+      'image' => '/images/XStream Gym.png',
+      'tech' =>
+      array (
+        0 => 'Laravel',
+        1 => 'Inertia.js',
+        2 => 'Vue.js',
+        3 => 'WebSocket',
+        4 => 'Redis',
+        5 => 'Stripe',
+      ),
+      'liveUrl' => '#',
+      'summary' => 'XStream Gym is a full-stack fitness platform that connects certified trainers with members through live-streamed and on-demand workout classes, built with Laravel and Inertia.js.',
+      'challenge' => 'The client wanted a single platform that could stream live fitness classes in real time, run a trainer marketplace with scheduling and payouts, track member health and nutrition, and keep members socially engaged — all under one role-based admin system.',
+      'solution' => 'We built a Laravel + Inertia.js platform with a WebSocket/Redis streaming backend for live classes (with class series, comments and attendance tracking), a trainer marketplace with profiles, schedules and reviews, Stripe-powered subscriptions and trainer payouts, integrated diet/nutrition and wearable-device tracking, social features (friends, messaging, likes, notifications), and a role-based admin dashboard covering users, trainers, classes, payments and disputes.',
+      'results' =>
+      array (
+        0 => 'Real-time live class streaming via WebSocket/Redis with class series and attendance tracking',
+        1 => 'Trainer marketplace with profiles, schedules, class management and reviews',
+        2 => 'Stripe-powered tiered subscriptions, trainer payouts and bank/withdrawal management',
+        3 => 'Health & nutrition tracking with diet plans, meal logging and wearable device sync',
+        4 => 'Social features: friend connections, messaging, likes and notifications',
+        5 => 'Role-based admin dashboard for users, trainers, classes, payments and disputes/cases',
+      ),
+      'featureGroups' =>
+      array (
+        0 =>
+        array (
+          'title' => 'Live Class Streaming',
+          'items' =>
+          array (
+            0 => 'Real-time video classes powered by a WebSocket/Redis streaming backend',
+            1 => 'Class series scheduling with live and on-demand playback',
+            2 => 'In-class comments and live attendance tracking',
+          ),
+        ),
+        1 =>
+        array (
+          'title' => 'Trainer Marketplace',
+          'items' =>
+          array (
+            0 => 'Trainer profiles with certifications and specialties',
+            1 => 'Class scheduling and management tools for trainers',
+            2 => 'Member reviews and ratings',
+          ),
+        ),
+        2 =>
+        array (
+          'title' => 'Subscriptions & Payments',
+          'items' =>
+          array (
+            0 => 'Tiered membership packages/plans',
+            1 => 'Stripe-powered billing and checkout',
+            2 => 'Trainer payouts with bank account and withdrawal management',
+          ),
+        ),
+        3 =>
+        array (
+          'title' => 'Health & Nutrition Tracking',
+          'items' =>
+          array (
+            0 => 'Integrated diet plans and meal/food logging',
+            1 => 'Wearable device sync: heart rate, sleep and weight',
+            2 => 'Progress tracking over time',
+          ),
+        ),
+        4 =>
+        array (
+          'title' => 'Social Features',
+          'items' =>
+          array (
+            0 => 'Friend connections and direct messaging',
+            1 => 'Likes and engagement notifications',
+            2 => 'Activity feed to keep members connected',
+          ),
+        ),
+        5 =>
+        array (
+          'title' => 'Admin Dashboard',
+          'items' =>
+          array (
+            0 => 'Role-based admin panel for users, trainers and classes',
+            1 => 'Payment and payout oversight',
+            2 => 'Disputes/cases management and platform settings',
+          ),
+        ),
+      ),
+      'architectureHighlights' =>
+      array (
+        0 => 'Laravel backend with Inertia.js bridging to a Vue.js SPA-style frontend for a seamless single-page experience',
+        1 => 'WebSocket/Redis streaming backend powering real-time live class video, comments and attendance',
+        2 => 'Stripe integration for tiered subscriptions, one-off billing and trainer payout/withdrawal flows',
+        3 => 'Role-based access control separating member, trainer and admin experiences within one codebase',
+      ),
+      'techTable' =>
+      array (
+        0 => array ('layer' => 'Backend', 'technology' => 'Laravel (PHP)'),
+        1 => array ('layer' => 'Frontend', 'technology' => 'Inertia.js, Vue.js'),
+        2 => array ('layer' => 'Real-time streaming', 'technology' => 'WebSocket, Redis'),
+        3 => array ('layer' => 'Payments', 'technology' => 'Stripe (subscriptions, billing, payouts)'),
+        4 => array ('layer' => 'Health data', 'technology' => 'Wearable device sync (heart rate, sleep, weight)'),
+      ),
+      'outcome' => 'A unified fitness platform where members stream live and on-demand classes, track their health, and stay socially engaged, while trainers run their own marketplace presence and get paid — all managed through one role-based admin dashboard.',
+      'featured' => true,
+    ),
+    7 =>
+    array (
+      'slug' => 'universal-services',
+      'name' => 'Universal Services',
+      'category' => 'Web Applications',
+      'industry' => 'Finance / Remittance',
+      'image' => '/images/universal-services.jpg',
+      'tech' =>
+      array (
+        0 => 'Laravel',
+        1 => 'Vue.js',
+        2 => 'Inertia.js',
+        3 => 'Tailwind CSS',
+        4 => 'MySQL',
+      ),
+      'liveUrl' => '#',
+      'summary' => 'Universal Services is a secure, full-stack remittance platform for international money transfers, built with Laravel 8, Vue.js 2, and Inertia.js for a fast, SPA-like experience without a separate API layer.',
+      'challenge' => 'The client needed a compliant, trustworthy platform for cross-border money transfers that could handle multi-currency rates, KYC/AML onboarding, and a full back-office for suppliers, collection stations and payments — all with real-time visibility for both customers and admins.',
+      'solution' => 'We built a Laravel 8 + Inertia/Vue 2 platform combining a customer-facing transfer flow with a comprehensive admin dashboard: multi-currency exchange rate management, KYC/AML compliance workflows, beneficiary management with transfer tracking, and reporting via DomPDF and Laravel Excel, secured with Jetstream/Fortify role-based access and two-factor authentication.',
+      'results' =>
+      array (
+        0 => 'Multi-currency support with real-time exchange rate management',
+        1 => 'KYC/AML compliant customer onboarding workflows',
+        2 => 'Beneficiary management with live transfer tracking',
+        3 => 'Admin dashboard covering suppliers, collection stations, rates, cheques and payments',
+        4 => 'PDF and Excel reporting: customer statements, outstanding balances, supplier rates, transfer history',
+        5 => 'Role-based access control with two-factor authentication',
+      ),
+      'featureGroups' =>
+      array (
+        0 =>
+        array (
+          'title' => 'Transfers & Rates',
+          'items' =>
+          array (
+            0 => 'Multi-currency support with real-time exchange rate management',
+            1 => 'Beneficiary management and transfer tracking',
+            2 => 'Send-money flow with delivery method and purpose selection',
+          ),
+        ),
+        1 =>
+        array (
+          'title' => 'Compliance',
+          'items' =>
+          array (
+            0 => 'Customer onboarding with KYC/AML compliance workflows',
+            1 => 'Compliance status monitoring and audit logs',
+          ),
+        ),
+        2 =>
+        array (
+          'title' => 'Admin Dashboard',
+          'items' =>
+          array (
+            0 => 'Suppliers, collection stations, rates, cheques and payments management',
+            1 => 'Real-time transfer volume, beneficiary and compliance stats',
+            2 => 'Recent activity feed and audit logs',
+          ),
+        ),
+        3 =>
+        array (
+          'title' => 'Reporting',
+          'items' =>
+          array (
+            0 => 'PDF and Excel report generation via DomPDF and Laravel Excel',
+            1 => 'Customer statements, outstanding balances, supplier rates, transfer history',
+          ),
+        ),
+        4 =>
+        array (
+          'title' => 'Security',
+          'items' =>
+          array (
+            0 => 'Role-based access control and two-factor authentication via Laravel Jetstream and Fortify',
+            1 => 'File imports/exports for bulk data handling, with AWS S3-backed file storage',
+          ),
+        ),
+      ),
+      'architectureHighlights' =>
+      array (
+        0 => 'Laravel 8 backend with Jetstream and Fortify, Inertia.js bridging to a Vue.js 2 SPA-style frontend without a separate API layer',
+        1 => 'AWS S3-backed file storage for bulk import/export handling',
+        2 => 'DomPDF and Laravel Excel for customer statements, balances, rates and transfer history reports',
+      ),
+      'techTable' =>
+      array (
+        0 => array ('layer' => 'Backend', 'technology' => 'Laravel 8 (PHP)'),
+        1 => array ('layer' => 'Frontend', 'technology' => 'Vue.js 2, Inertia.js, Tailwind CSS'),
+        2 => array ('layer' => 'Auth', 'technology' => 'Laravel Jetstream, Fortify, Sanctum, 2FA'),
+        3 => array ('layer' => 'Documents', 'technology' => 'DomPDF, Laravel Excel'),
+        4 => array ('layer' => 'Storage', 'technology' => 'AWS S3'),
+        5 => array ('layer' => 'Database', 'technology' => 'MySQL'),
+        6 => array ('layer' => 'Build tooling', 'technology' => 'Laravel Mix/Webpack'),
+      ),
+      'outcome' => 'A secure remittance platform covering the full transfer lifecycle — multi-currency rates, KYC/AML onboarding, beneficiary tracking and admin reporting — with role-based access and two-factor authentication throughout.',
+      'featured' => true,
     ),
   ),
 );
