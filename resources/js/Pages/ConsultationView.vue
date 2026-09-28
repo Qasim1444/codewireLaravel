@@ -245,8 +245,7 @@ async function submit() {
   }
 
   try {
-    // NOTE: confirm endpoint path + field names with the CodeWire backend.
-    await axios.post(`${company.apiBase}/contacts`, payload, { timeout: 12000 })
+    await axios.post('/contact', payload, { timeout: 12000 })
     sent.value = true
     Swal.fire({
       icon: 'success',

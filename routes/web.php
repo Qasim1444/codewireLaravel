@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Support\SiteData;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -138,11 +139,8 @@ Route::get('/careers', function () {
     ]);
 })->name('careers');
 
-Route::get('/contact', function () {
-    return Inertia::render('ContactView', [
-        'services' => SiteData::services(),
-    ]);
-})->name('contact');
+Route::get('/contact', [ContactController::class, 'view'])->name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 Route::fallback(function () {
     return Inertia::render('NotFoundView');
