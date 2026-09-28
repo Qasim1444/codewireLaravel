@@ -74,7 +74,7 @@
                 <Link :href="`/services/${s.slug}`" class="link-arrow service-block__link service-block__link--primary">
                   See full details <AppIcon name="arrow-right" />
                 </Link>
-                <Link href="/contact#start" class="link-arrow service-block__link">
+                <Link href="/contact" class="link-arrow service-block__link">
                   Discuss a project <AppIcon name="arrow-right" />
                 </Link>
               </div>

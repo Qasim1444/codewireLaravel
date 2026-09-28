@@ -15,7 +15,7 @@ Smart Software Real Growth
             communication, start to finish.
           </p>
           <div class="btn-group hero__cta reveal" v-reveal="240">
-            <Link href="/contact#start" class="btn btn--primary btn--lg">
+            <Link href="/contact" class="btn btn--primary btn--lg">
               Start a Project <AppIcon name="arrow-right" class="icon-arrow" />
             </Link>
             <Link href="/work" class="btn btn--ghost btn--lg">View Our Work</Link>

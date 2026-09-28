@@ -16,7 +16,7 @@
       </nav>
 
       <div class="header__actions">
-        <Link href="/contact#start" class="btn btn--primary btn--sm header__cta">
+        <Link href="/contact" class="btn btn--primary btn--sm header__cta">
           Start a Project
         </Link>
         <button
@@ -48,7 +48,7 @@
           {{ item.label }}
           <AppIcon name="arrow-up-right" :size="18" />
         </Link>
-        <Link href="/contact#start" class="btn btn--primary btn--block header__panel-cta" @click="close">
+        <Link href="/contact" class="btn btn--primary btn--block header__panel-cta" @click="close">
           Start a Project
         </Link>
       </nav>

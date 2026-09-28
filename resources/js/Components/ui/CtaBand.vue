@@ -31,7 +31,7 @@ defineProps({
       'Tell us about your project and get a clear, honest plan — scope, timeline and a transparent estimate. No obligation.',
   },
   primaryLabel: { type: String, default: 'Start a Project' },
-  primaryTo: { type: [String, Object], default: '/contact#start' },
+  primaryTo: { type: [String, Object], default: '/contact' },
   secondaryLabel: { type: String, default: 'View Our Work' },
   secondaryTo: { type: [String, Object], default: '/work' },
   flush: { type: Boolean, default: false },
