@@ -234,6 +234,20 @@ class MetaConversionsApiTest extends TestCase
         Http::assertNothingSent();
     }
 
+    public function test_meta_capi_sends_inline_by_default(): void
+    {
+        Http::fake(['graph.facebook.com/*' => Http::response(['events_received' => 1], 200)]);
+        Queue::fake();
+
+        config()->set('services.meta.queue', config('services.meta.queue'));
+        config()->set('queue.default', 'database');
+
+        $this->postJson('/contact', $this->contactPayload())->assertCreated();
+
+        Http::assertSentCount(1);
+        Queue::assertNothingPushed();
+    }
+
     public function test_the_service_builds_an_event_with_the_documented_shape(): void
     {
         $meta = app(MetaConversionsService::class);

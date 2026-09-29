@@ -47,8 +47,9 @@ return [
         // Only set while validating in Events Manager > Test Events.
         'test_event_code' => env('META_TEST_EVENT_CODE'),
 
-        // Push server-side events onto the queue rather than sending them inline.
-        'queue' => env('META_CAPI_QUEUE', true),
+        // Send inline by default so Test Events appear immediately. Set true
+        // only when a queue worker is running continuously.
+        'queue' => env('META_CAPI_QUEUE', false),
 
         // Require marketing consent before any pixel/CAPI tracking happens.
         'require_consent' => env('META_REQUIRE_CONSENT', true),
