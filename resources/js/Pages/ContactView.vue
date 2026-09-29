@@ -231,8 +231,8 @@ async function submit() {
     trackLead(eventId, { content_name: subject, content_category: 'website-contact-form' })
     Swal.fire({
       icon: 'success',
-      title: 'Message sent',
-      text: 'Thanks for reaching out — we’ll get back to you within one business day.',
+      title: 'Email submitted',
+      text: 'Your message has been submitted successfully. We will contact you soon.',
       confirmButtonColor: '#ffc400',
     })
     Object.keys(form).forEach((k) => (form[k] = ''))
