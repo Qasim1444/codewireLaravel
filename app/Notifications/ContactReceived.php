@@ -39,8 +39,7 @@ class ContactReceived extends Notification
         $adminEmail = $site['contact']['email'] ?? config('mail.from.address');
 
         return (new ContactReceivedMailable($this->contact))
-            ->to($this->contact->email)
-            ->cc($adminEmail);
+            ->to($adminEmail);
     }
 
     /**

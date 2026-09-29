@@ -71,7 +71,7 @@ class ContactController extends Controller
         try {
             $contact->notify(new ContactReceived($contact));
         } catch (\Throwable $e) {
-            Log::error('Contact notification failed: '.$e->getMessage(), [
+            $this->logSafely('error', 'Contact notification failed: '.$e->getMessage(), [
                 'contact_id' => $contact->id,
                 'exception' => $e,
             ]);
@@ -100,7 +100,7 @@ class ContactController extends Controller
             }
 
             if (! MarketingConsent::granted($request)) {
-                Log::debug('Meta CAPI: Lead not sent, no marketing consent.', [
+                $this->logSafely('debug', 'Meta CAPI: Lead not sent, no marketing consent.', [
                     'contact_id' => $contact->id,
                 ]);
 
@@ -109,7 +109,7 @@ class ContactController extends Controller
 
             // Guard against a repeated submission re-sending the same conversion.
             if (! Cache::add($this->dedupeKey('Lead', $eventId), true, now()->addHours(6))) {
-                Log::debug('Meta CAPI: duplicate Lead suppressed.', ['event_id' => $eventId]);
+                $this->logSafely('debug', 'Meta CAPI: duplicate Lead suppressed.', ['event_id' => $eventId]);
 
                 return;
             }
@@ -129,7 +129,7 @@ class ContactController extends Controller
                 ]),
             );
         } catch (\Throwable $e) {
-            Log::error('Meta CAPI: Lead tracking failed.', [
+            $this->logSafely('error', 'Meta CAPI: Lead tracking failed.', [
                 'contact_id' => $contact->id,
                 'error' => $e->getMessage(),
             ]);
@@ -139,5 +139,19 @@ class ContactController extends Controller
     protected function dedupeKey(string $eventName, string $eventId): string
     {
         return "meta:event:{$eventName}:{$eventId}";
+    }
+
+    /**
+     * Logging should never turn a successfully saved contact into a failed form.
+     *
+     * @param  array<string, mixed>  $context
+     */
+    protected function logSafely(string $level, string $message, array $context = []): void
+    {
+        try {
+            Log::log($level, $message, $context);
+        } catch (\Throwable) {
+            //
+        }
     }
 }
