@@ -47,6 +47,12 @@ class HandleInertiaRequests extends Middleware
                 'nav' => $site['nav'],
                 'footerColumns' => $site['footerColumns'],
             ],
+            // Public tracking config only. The CAPI access token and the test
+            // event code are server-side secrets and are never shared here.
+            'tracking' => [
+                'metaPixelId' => config('services.meta.pixel_id') ?: null,
+                'requireConsent' => (bool) config('services.meta.require_consent', true),
+            ],
         ];
     }
 }

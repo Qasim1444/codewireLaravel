@@ -35,4 +35,23 @@ return [
         ],
     ],
 
+    'meta' => [
+        // Pixel / Dataset ID - public, safe to render in the browser.
+        'pixel_id' => env('META_PIXEL_ID'),
+
+        // Conversions API access token - server-side only, never exposed to the frontend.
+        'capi_access_token' => env('META_CAPI_ACCESS_TOKEN'),
+
+        'graph_version' => env('META_GRAPH_VERSION', 'v26.0'),
+
+        // Only set while validating in Events Manager > Test Events.
+        'test_event_code' => env('META_TEST_EVENT_CODE'),
+
+        // Push server-side events onto the queue rather than sending them inline.
+        'queue' => env('META_CAPI_QUEUE', true),
+
+        // Require marketing consent before any pixel/CAPI tracking happens.
+        'require_consent' => env('META_REQUIRE_CONSENT', true),
+    ],
+
 ];

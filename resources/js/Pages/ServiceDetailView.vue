@@ -108,7 +108,8 @@
 
 <script setup>
 import { Link } from '@inertiajs/vue3'
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
+import { trackViewContent } from '@/meta-pixel'
 import AppIcon from '@/Components/ui/AppIcon.vue'
 import SectionHeading from '@/Components/ui/SectionHeading.vue'
 import ServiceCard from '@/Components/ui/ServiceCard.vue'
@@ -125,6 +126,15 @@ const service = computed(() => props.service)
 const related = computed(() =>
   service.value ? services.filter((s) => s.slug !== service.value.slug).slice(0, 3) : []
 )
+
+onMounted(() => {
+  if (!service.value) return
+  trackViewContent({
+    contentName: service.value.title,
+    contentType: 'service',
+    contentIds: [service.value.slug],
+  })
+})
 </script>
 
 <style scoped>

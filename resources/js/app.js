@@ -5,6 +5,11 @@ import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';
 import Layout from './Layouts/AppLayout.vue';
 import reveal from './directives/reveal.js';
+import { setupMetaPixel } from './meta-pixel.js';
+
+// Registered before createInertiaApp so the initial Inertia navigate event
+// (and therefore the first PageView) is captured.
+setupMetaPixel();
 
 createInertiaApp({
     resolve: (name) => {

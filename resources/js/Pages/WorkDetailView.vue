@@ -154,7 +154,8 @@
 
 <script setup>
 import { Link } from '@inertiajs/vue3'
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
+import { trackViewContent } from '@/meta-pixel'
 import AppIcon from '@/Components/ui/AppIcon.vue'
 import SampleFlag from '@/Components/ui/SampleFlag.vue'
 import CtaBand from '@/Components/ui/CtaBand.vue'
@@ -172,6 +173,15 @@ const prev = computed(() => (index.value > 0 ? projects[index.value - 1] : null)
 const next = computed(() =>
   index.value >= 0 && index.value < projects.length - 1 ? projects[index.value + 1] : null
 )
+
+onMounted(() => {
+  if (!project.value) return
+  trackViewContent({
+    contentName: project.value.title,
+    contentType: 'project',
+    contentIds: [project.value.slug],
+  })
+})
 </script>
 
 <style scoped>

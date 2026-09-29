@@ -156,6 +156,8 @@ import { usePage } from '@inertiajs/vue3'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 import AppIcon from '@/Components/ui/AppIcon.vue'
+import { newEventId, trackLead } from '@/meta-pixel'
+import { marketingAllowed } from '@/consent'
 
 const props = defineProps({
   services: { type: Array, default: () => [] },
@@ -202,19 +204,31 @@ async function submit() {
   if (!validate()) return
 
   submitting.value = true
+
+  // Shared Pixel/CAPI deduplication key for this submission.
+  const eventId = newEventId()
+  const subject = form.service
+
   const payload = {
     name: form.name,
     email: form.email,
     phone: form.phone,
     company: form.company,
-    subject: form.service,
+    subject,
     message: form.message,
     source: 'website-contact-form',
+    event_id: eventId,
+    event_source_url: window.location.href,
+    marketing_consent: marketingAllowed(),
   }
 
   try {
     await axios.post('/contact', payload, { timeout: 12000 })
     sent.value = true
+
+    // Only a successful submission counts as a Lead. The server sends the same
+    // event_id via the Conversions API so Meta deduplicates the pair.
+    trackLead(eventId, { content_name: subject, content_category: 'website-contact-form' })
     Swal.fire({
       icon: 'success',
       title: 'Message sent',

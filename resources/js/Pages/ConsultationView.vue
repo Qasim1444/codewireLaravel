@@ -168,6 +168,8 @@ import { usePage } from '@inertiajs/vue3'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 import AppIcon from '@/Components/ui/AppIcon.vue'
+import { newEventId, trackLead } from '@/meta-pixel'
+import { marketingAllowed } from '@/consent'
 
 const props = defineProps({
   services: { type: Array, default: () => [] },
@@ -231,22 +233,34 @@ async function submit() {
   if (!validate()) return
 
   submitting.value = true
+
+  // Shared Pixel/CAPI deduplication key for this submission.
+  const eventId = newEventId()
+  const subject = `Consultation request — ${form.topic}`
+
   const payload = {
     name: form.name,
     email: form.email,
     phone: form.phone,
     company: form.company,
-    subject: `Consultation request — ${form.topic}`,
+    subject,
     preferredDate: form.date || 'No preference',
     preferredTime: form.time || 'No preference',
     contactMethod: form.method,
     message: form.message,
     source: 'website-consultation-form',
+    event_id: eventId,
+    event_source_url: window.location.href,
+    marketing_consent: marketingAllowed(),
   }
 
   try {
     await axios.post('/contact', payload, { timeout: 12000 })
     sent.value = true
+
+    // A consultation *request* is a Lead. The Schedule event is only sent once
+    // the booking has actually been confirmed (php artisan meta:schedule <id>).
+    trackLead(eventId, { content_name: subject, content_category: 'website-consultation-form' })
     Swal.fire({
       icon: 'success',
       title: 'Consultation requested',

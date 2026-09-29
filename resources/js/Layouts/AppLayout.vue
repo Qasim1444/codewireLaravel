@@ -20,11 +20,14 @@
     </svg>
     <span class="wa-widget__tooltip">Chat on WhatsApp</span>
   </a>
+
+  <CookieConsent />
 </template>
 
 <script setup>
 import AppHeader from '../Components/layout/AppHeader.vue'
 import AppFooter from '../Components/layout/AppFooter.vue'
+import CookieConsent from '../Components/ui/CookieConsent.vue'
 </script>
 
 <style>
